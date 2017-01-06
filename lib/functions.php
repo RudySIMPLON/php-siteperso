@@ -8,9 +8,9 @@ la logique pour choisir la page à charger
 
 function getContent(){
 	if(!isset($_GET['page'])){
-		include __DIR__.'/../pages/home.php.'.'/../pages/bio.php'.'/../pages/contact.php';
+		include __DIR__.'/../pages/home.php';
 
-	} else {
+	} else { include '../pages/'.$_GET['page'].'.php';
 		// le reste du code
 	}
 }
@@ -18,3 +18,16 @@ function getContent(){
 function getPart($name){
 	include __DIR__ . '/../parts/'. $name . '.php';
 }
+
+
+function getUserData (){
+
+	$file=file_get_contents ("data/user.json");
+
+		echo $file;
+
+		json_decode($file);
+
+ }
+
+

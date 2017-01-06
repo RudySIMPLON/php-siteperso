@@ -7,6 +7,6 @@
 </head>
 <body>
 
-<?php include "menu.php" ?>
+<?php include "../parts/menu.php" ?>
 
 	
