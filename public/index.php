@@ -15,4 +15,5 @@ require __DIR__ . '/../lib/functions.php';
 getPart('header');
 getContent('$page');
 getPart('footer');
+getUserData('file');
 
