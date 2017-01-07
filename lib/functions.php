@@ -22,12 +22,12 @@ function getPart($name){
 
 function getUserData (){
 
-	$file=file_get_contents ("data/user.json");
+	$file=file_get_contents("../data/user.json");
 
-		echo $file;
+ $user=json_decode($file,true);
+ // var_dump($user);
+ return $user ;
 
-		json_decode($file);
-
- }
+}
 
 
